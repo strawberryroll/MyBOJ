@@ -9,7 +9,11 @@ let input = [];
 rl.on('line', function (line) {
     input = line.split(' ');
 }).on('close', function () {
-    for (let i=1; i<=input[0]; i++) {
+    solution(Number(input[0]));
+});
+
+function solution(n) {
+    for (let i=1; i<=n; i++) {
         console.log('*'.repeat(i));
     }
-});
+}
