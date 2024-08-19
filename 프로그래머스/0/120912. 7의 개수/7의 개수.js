@@ -1,11 +1,4 @@
 function solution(array) {
-    let count = 0;
-    let arr = array.map((e) => e.toString());
-    arr.map((e) => {
-        for (i of e) {
-            if (i === "7") count++;
-        }
-    });
-    return count;
-    
+    console.log(array.join('').split('7'));
+    return array.join('').split('7').length-1;
 }
