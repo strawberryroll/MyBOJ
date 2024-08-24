@@ -1,8 +1,11 @@
 function solution(i, j, k) {
-    let count = 0;
+    let str = "";
+    
     for (let a = i; a <= j; a++) {
-        if (a.toString().includes(k.toString())) count++;
-        console.log(count);
+        str += a.toString();
     }
-    return count;
+    
+    console.log(str.split(k));
+    
+    return str.split(k).length-1;
 }
