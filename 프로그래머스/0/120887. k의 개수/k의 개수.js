@@ -1,8 +1,8 @@
 function solution(i, j, k) {
     let str = "";
     
-    for (let a = i; a <= j; a++) {
-        str += a.toString();
+    for (i; i <= j; i++) {
+        str += i.toString();
     }
     
     console.log(str.split(k));
