@@ -11,19 +11,7 @@ function solution(A, B) {
         arrA.unshift(temp);
         count++;
         
-        if (arrA.join("") === B) {
-            return count;
-        }
-        
-        console.log(arrA, count);
+        if (arrA.join("") === B) return count;
     }
-    
-    if (arrA.join("") !== [...B]) {
-            return -1;
-    }
-    
-    
-    
-    
-    
+    if (arrA.join("") !== [...B]) return -1;   
 }
