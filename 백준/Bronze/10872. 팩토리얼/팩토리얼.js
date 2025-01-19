@@ -1,10 +1,12 @@
 const input = require('fs').readFileSync('/dev/stdin').toString().trim();
 
 const N = Number(input);
-let answer = 1;
 
-for (let i = 1; i < N + 1; i++) {
-    answer *= i;
+function factorial(num) {
+    if (num <= 1) { 
+        return 1;
+    }
+    return num * factorial(num - 1);
 }
 
-console.log(answer);
+console.log(factorial(N));
