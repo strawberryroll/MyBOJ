@@ -5,14 +5,23 @@ const input = fs
     .trim()
     .split("\n")
     .map((el) => el.split(" ").map(Number));
-const [n, arr, x] = input;
+const [n, arr, x] = [input[0][0], input[1].sort((a, b) => a - b), input[2][0]];
 
-const occur = Array(x + 1).fill(false);
 let count = 0;
+let left = 0;
+let right = n - 1;
 
-for (let i = 0; i < n; i++) {
-    if (x - arr[i] > 0 && occur[x - arr[i]]) count++;
-    occur[arr[i]] = true;
+while (left < right) {
+    const sum = arr[left] + arr[right];
+    if (sum === x) {
+        count++;
+        left++;
+        right--;
+    } else if (sum < x) {
+        left++;
+    } else {
+        right--;
+    }
 }
 
 console.log(count);
