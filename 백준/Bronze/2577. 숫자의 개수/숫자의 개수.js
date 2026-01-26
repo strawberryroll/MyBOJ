@@ -6,11 +6,12 @@ const input = fs
     .map(Number);
 
 const [A, B, C] = input;
-const str = (A * B * C).toString();
+let num = A * B * C;
 
 const arr = Array(10).fill(0);
-for (const c of str) {
-    arr[c]++;
+while (num > 0) {
+    arr[num % 10]++;
+    num = Math.floor(num / 10);
 }
 
 for (let i = 0; i < 10; i++) {
