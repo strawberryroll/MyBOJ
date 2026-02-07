@@ -28,20 +28,6 @@ function size() {
     return tail - head;
 }
 
-function empty() {
-    return head === tail ? 1 : 0;
-}
-
-function front() {
-    if (head === tail) return -1;
-    else return data[head];
-}
-
-function back() {
-    if (head === tail) return -1;
-    else return data[tail - 1];
-}
-
 for (let i = 0; i < n; i++) {
     push(i + 1);
 }
